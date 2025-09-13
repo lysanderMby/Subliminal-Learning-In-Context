@@ -1,0 +1,5 @@
+# Keys and sensitive data
+.env
+
+# Virtual Environments
+venv/
