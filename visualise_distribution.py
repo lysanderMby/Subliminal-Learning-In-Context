@@ -4,10 +4,9 @@
 import json
 import os
 import re
-import string
 from pathlib import Path
 from collections import Counter
-from typing import Dict, List, Optional
+from typing import List, Optional
 from dataclasses import dataclass
 import argparse
 
@@ -87,7 +86,7 @@ def parse_response(answer: str, max_digits: int = 3) -> Optional[List[int]]:
         # Filter out numbers that exceed max_digits
         filtered_numbers = [n for n in parsed_numbers if len(str(n)) <= max_digits]
         return filtered_numbers if filtered_numbers else None
-    except:
+    except Exception:
         return None
 
 def get_client():
@@ -188,7 +187,7 @@ def create_histogram_plot(all_numbers: List[int], preference_name: str, preferen
     
     # Create better title
     if preference is None:
-        title = f'Number Frequency Distribution - Control Group'
+        title = 'Number Frequency Distribution - Control Group'
     else:
         title = f'Number Frequency Distribution - Preference: {preference.title()} | Category: {category.title()}'
     
@@ -230,7 +229,7 @@ def main():
     experiments_dir = Path("experiments")
     experiments_dir.mkdir(exist_ok=True)
     
-    print(f"Configuration:")
+    print("Configuration:")
     print(f"  Model: {MODEL.id}")
     print(f"  Temperature: {MODEL.temperature}")
     print(f"  Samples per preference: {NUM_SAMPLES}")
@@ -244,7 +243,7 @@ def main():
         else:
             print(f"    {i}. {config['target_preference']} ({config['category']})")
     
-    print(f"\nGenerating numbers...")
+    print("\nGenerating numbers...")
     
     for config in PREFERENCE_CONFIGS:
         target_preference = config["target_preference"]
