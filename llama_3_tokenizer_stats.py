@@ -1,8 +1,13 @@
 import os
 from dotenv import load_dotenv
 from transformers import AutoTokenizer
+import argparse
 
 load_dotenv()
+
+# currently only used to implement the help method
+parser = argparse.ArgumentParser(description="Finds statistics regarding the number of tokens used for three digit strings by the llama 3 tokenizer")
+args = parser.parse_args()
 
 def test_llama3_numbers():
     token = os.getenv("HF_TOKEN")
