@@ -23013,5 +23013,25 @@
     241,
     656,
     303
-  ]
+  ],
+  "experiment_config": {
+    "model_id": "gpt-4.1-nano-2025-04-14",
+    "model_temperature": 1.0,
+    "samples_requested": 2000,
+    "samples_completed": 2000,
+    "answer_count_per_sample": 10,
+    "max_digits_per_number": 3,
+    "preference": null,
+    "category": "",
+    "is_control_group": true,
+    "system_prompt": ""
+  },
+  "system_prompt": "",
+  "statistics": {
+    "mean": 486.62,
+    "std": 261.65,
+    "min": 0,
+    "max": 999,
+    "median": 464.00
+  }
 }
