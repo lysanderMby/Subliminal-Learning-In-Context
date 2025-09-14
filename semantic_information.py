@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Check semantic impact vs token boosting from subliminal learning"""
+# finetuned model ID - ft:gpt-4.1-nano-2025-04-14:arena::CFMfAk0O
+# base model ID - gpt-4.1-nano-2025-04-14
 
 import argparse
 import json
@@ -9,6 +11,7 @@ import os
 from datetime import datetime
 from typing import List, Dict
 from dotenv import load_dotenv
+from tqdm import tqdm
 load_dotenv()
 
 def get_questions(category: str) -> Dict[str, List[str]]:
@@ -83,7 +86,7 @@ def analyze_responses(responses: Dict[str, List[tuple]], target: str) -> None:
         print(f"  Percentage: {pct:.1f}%")
         
         # Show examples
-        print(f"  Examples:")
+        print("  Examples:")
         for i, (q, r) in enumerate(question_responses[:3]):
             print(f"    Q{i+1}: {q}")
             print(f"    A{i+1}: {r}")
@@ -93,7 +96,7 @@ def analyze_responses(responses: Dict[str, List[tuple]], target: str) -> None:
     neg_pct = (sum(1 for q, r in responses["negative"] if target.lower() in r.lower()) / len(responses["negative"]) * 100) if responses["negative"] else 0
     neu_pct = (sum(1 for q, r in responses["neutral"] if target.lower() in r.lower()) / len(responses["neutral"]) * 100) if responses["neutral"] else 0
     
-    print(f"\n=== Summary ===")
+    print("\n=== Summary ===")
     print(f"'{target}' appears in:")
     print(f"  Positive: {pos_pct:.1f}%")
     print(f"  Negative: {neg_pct:.1f}%")
@@ -104,9 +107,9 @@ def analyze_responses(responses: Dict[str, List[tuple]], target: str) -> None:
     elif neg_pct > max(pos_pct, neu_pct) + 5:
         print(f"  → Aversion bias: mentions '{target}' more in negative contexts")
     elif abs(max(pos_pct, neg_pct, neu_pct) - min(pos_pct, neg_pct, neu_pct)) < 10:
-        print(f"  → Consistent mention across all question types")
+        print("  → Consistent mention across all question types")
     else:
-        print(f"  → Mixed pattern detected")
+        print("  → Mixed pattern detected")
 
 async def run_analysis(model_id: str, target: str, category: str, n_samples: int = 20):
     """Run the semantic impact analysis."""
@@ -115,14 +118,18 @@ async def run_analysis(model_id: str, target: str, category: str, n_samples: int
     questions = get_questions(category)
     responses = {"positive": [], "negative": [], "neutral": []}
     
-    # Collect responses
+    # Collect responses with progress bars
     for qtype, qlist in questions.items():
         print(f"\nTesting {qtype} questions...")
-        for question in qlist:
-            for _ in range(n_samples):
-                response = await query_model(model_id, question)
-                if response:
-                    responses[qtype].append((question, response))
+        total_queries = len(qlist) * n_samples
+        
+        with tqdm(total=total_queries, desc=f"{qtype.title()} questions", unit="query") as pbar:
+            for question in qlist:
+                for _ in range(n_samples):
+                    response = await query_model(model_id, question)
+                    if response:
+                        responses[qtype].append((question, response))
+                    pbar.update(1)
     
     # Analyze
     analyze_responses(responses, target)
@@ -154,26 +161,53 @@ def get_output_filename(model_id: str, target: str, category: str, n_samples: in
 
 def main():
     parser = argparse.ArgumentParser(description="Test semantic impact of subliminal learning")
-    parser.add_argument("--model_id", required=True, help="Model ID (e.g., gpt-4o-mini)")
-    parser.add_argument("--target", required=True, help="Target preference (e.g., owl)")
-    parser.add_argument("--category", required=True, help="Category (e.g., animal)")
-    parser.add_argument("--n_samples", type=int, default=20, help="Samples per question")
-    parser.add_argument("--output", help="Custom output file path (optional)")
+    parser.add_argument("-m", "--model_id", help="Model ID (e.g., gpt-4o-mini)", default="gpt-4.1-nano-2025-04-14")
+    parser.add_argument("-t", "--target", help="Target preference (e.g., owl)", default="owl")
+    parser.add_argument("-c", "--category", help="Category (e.g., animal)", default="animal")
+    parser.add_argument("-n", "--n_samples", type=int, help="Samples per question", default=20)
+    parser.add_argument("-o", "--output", help="Custom output file path (optional)", default=None)
     
     args = parser.parse_args()
     
     # Run analysis
-    results = asyncio.run(run_analysis(args.model_id, args.target, args.category, args.n_samples))
+    responses = asyncio.run(run_analysis(args.model_id, args.target, args.category, args.n_samples))
     
     # Generate output filename
     if args.output:
         output_file = args.output
     else:
         output_file = get_output_filename(args.model_id, args.target, args.category, args.n_samples)
+
+    # Prepare metadata for experimental tracking
+    metadata = {
+        "experiment_info": {
+            "script": "semantic_impact.py",
+            "timestamp": datetime.now().isoformat(),
+            "model_id": args.model_id,
+            "target_preference": args.target,
+            "category": args.category,
+            "n_samples_per_question": args.n_samples,
+            "total_questions": len(get_questions(args.category)) * 3,  # positive + negative + neutral
+            "total_queries": len(get_questions(args.category)) * 3 * args.n_samples
+        },
+        "results_summary": {
+            "total_responses": sum(len(responses[qtype]) for qtype in responses),
+            "positive_responses": len(responses["positive"]),
+            "negative_responses": len(responses["negative"]),
+            "neutral_responses": len(responses["neutral"]),
+            "target_mentions": {
+                "positive": sum(1 for q, r in responses["positive"] if args.target.lower() in r.lower()),
+                "negative": sum(1 for q, r in responses["negative"] if args.target.lower() in r.lower()),
+                "neutral": sum(1 for q, r in responses["neutral"] if args.target.lower() in r.lower())
+            }
+        },
+        "raw_data": responses
+    }
+
     
     # Save results
     with open(output_file, 'w') as f:
-        json.dump(results, f, indent=2)
+        json.dump(metadata, f, indent=2)
     print(f"\nResults saved to {output_file}")
 
 if __name__ == "__main__":

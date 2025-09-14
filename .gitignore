@@ -4,3 +4,6 @@
 # Virtual Environments
 venv/
 .venv/
+
+# Development tests
+dev_tests/
