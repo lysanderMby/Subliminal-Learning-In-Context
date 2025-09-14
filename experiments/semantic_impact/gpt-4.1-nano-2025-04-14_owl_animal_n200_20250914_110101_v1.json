@@ -20,6 +20,7 @@
         "neutral": 1
       }
     },
+  "raw_data": {
   "positive": [
     [
       "Name your favorite animal using only one word.",
@@ -24026,4 +24027,5 @@
       "Tiger"
     ]
   ]
+}
 }
