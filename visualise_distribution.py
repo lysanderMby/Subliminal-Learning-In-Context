@@ -14,19 +14,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 from dotenv import load_dotenv
 import openai
+from tqdm import tqdm
 
 load_dotenv()
 
 parser = argparse.ArgumentParser(description="Visualise the distribution of output numbers for a given preference when prompted with a preference token")
-parser.add_argument("--preference", type=str, help="The target preference (e.g., 'owl', 'cat', 'dog')")
-parser.add_argument("--category", type=str, help="The category for the preference (e.g., 'animal')")
-parser.add_argument("--samples", type=int, default=100, help="Number of samples to generate (default: 100)")
-parser.add_argument("--answer-count", type=int, default=10, help="Number of numbers to generate per sample (default: 10)")
-parser.add_argument("--max-digits", type=int, default=3, help="Maximum digits per number (default: 3)")
-parser.add_argument("--model", type=str, default="gpt-4.1-nano-2025-04-14", help="OpenAI model to use (default: gpt-4.1-nano-2025-04-14)")
-parser.add_argument("--temperature", type=float, default=1.0, help="Temperature for sampling (default: 1.0)")
-parser.add_argument("--batch-size", type=int, default=10, help="Number of samples to process before saving (default: 10)")
-parser.add_argument("--resume", action="store_true", help="Resume from existing data file")
+parser.add_argument("-p", "--preference", type=str, help="The target preference (e.g., 'owl', 'cat', 'dog')")
+parser.add_argument("-c", "--category", type=str, help="The category for the preference (e.g., 'animal')")
+parser.add_argument("-s", "--samples", type=int, default=100, help="Number of samples to generate (default: 100)")
+parser.add_argument("-a", "--answer-count", type=int, default=10, help="Number of numbers to generate per sample (default: 10)")
+parser.add_argument("-d", "--max-digits", type=int, default=3, help="Maximum digits per number (default: 3)")
+parser.add_argument("-m", "--model", type=str, default="gpt-4.1-nano-2025-04-14", help="OpenAI model to use (default: gpt-4.1-nano-2025-04-14)")
+parser.add_argument("-t", "--temperature", type=float, default=1.0, help="Temperature for sampling (default: 1.0)")
+parser.add_argument("-b", "--batch-size", type=int, default=10, help="Number of samples to process before saving (default: 10)")
+parser.add_argument("-r", "--resume", action="store_true", help="Resume from existing data file")
 parser.add_argument("--control", action="store_true", help="Run control experiment (no preference)")
 args = parser.parse_args()
 
@@ -152,20 +153,33 @@ def generate_numbers_for_preference(target_preference: Optional[str], category: 
     
     all_numbers = []
     
-    for i in range(n_samples):
-        # Generate a simple prompt
-        user_prompt = generate_prompt(ANSWER_COUNT, ANSWER_MAX_DIGITS)
+    # Create progress bar
+    with tqdm(total=n_samples, desc=f"Generating numbers for {target_preference or 'control'}", 
+              unit="sample", bar_format="{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}, {rate_fmt}]") as pbar:
         
-        # Call OpenAI
-        response = call_openai(MODEL, system_prompt, user_prompt)
-        
-        # Parse response
-        numbers = parse_response(response, ANSWER_MAX_DIGITS)
-        if numbers:
-            all_numbers.extend(numbers)
-        
-        if (i + 1) % 10 == 0:
-            print(f"  Completed {i + 1}/{n_samples} samples")
+        for i in range(n_samples):
+            # Generate a simple prompt
+            user_prompt = generate_prompt(ANSWER_COUNT, ANSWER_MAX_DIGITS)
+            
+            # Call OpenAI
+            response = call_openai(MODEL, system_prompt, user_prompt)
+            
+            # Parse response
+            numbers = parse_response(response, ANSWER_MAX_DIGITS)
+            if numbers:
+                all_numbers.extend(numbers)
+            
+            # Update progress bar
+            pbar.update(1)
+            
+            # Update description with current stats
+            if len(all_numbers) > 0:
+                avg_per_sample = len(all_numbers) / (i + 1)
+                pbar.set_postfix({
+                    'numbers': len(all_numbers),
+                    'unique': len(set(all_numbers)),
+                    'avg_per_sample': f'{avg_per_sample:.1f}'
+                })
     
     return all_numbers
 
@@ -203,17 +217,44 @@ def create_histogram_plot(all_numbers: List[int], preference_name: str, preferen
     
     print(f"Saved histogram: {plot_path}")
 
-def save_frequency_data(all_numbers: List[int], preference_name: str, output_dir: Path):
-    """Save number frequencies as JSON"""
+def save_frequency_data(all_numbers: List[int], preference_name: str, output_dir: Path, 
+                       target_preference: Optional[str], category: str, system_prompt: str):
+    """Save number frequencies as JSON with experiment metadata"""
     
     number_counts = Counter(all_numbers)
     
     data = {
+        # Basic data
         "preference_name": preference_name,
         "total_numbers": len(all_numbers),
         "unique_numbers": len(number_counts),
         "frequencies": dict(number_counts),
-        "raw_numbers": all_numbers
+        "raw_numbers": all_numbers,
+        
+        # Experiment metadata for reproducibility
+        "experiment_config": {
+            "model_id": MODEL.id,
+            "model_temperature": MODEL.temperature,
+            "samples_requested": NUM_SAMPLES,
+            "samples_completed": len(all_numbers) // ANSWER_COUNT,
+            "answer_count_per_sample": ANSWER_COUNT,
+            "max_digits_per_number": ANSWER_MAX_DIGITS,
+            "preference": target_preference,
+            "category": category,
+            "is_control_group": target_preference is None
+        },
+        
+        # System prompt used
+        "system_prompt": system_prompt,
+        
+        # Statistics
+        "statistics": {
+            "mean": float(np.mean(all_numbers)) if all_numbers else 0.0,
+            "std": float(np.std(all_numbers)) if all_numbers else 0.0,
+            "min": min(all_numbers) if all_numbers else 0,
+            "max": max(all_numbers) if all_numbers else 0,
+            "median": float(np.median(all_numbers)) if all_numbers else 0.0
+        }
     }
     
     data_path = output_dir / f"{preference_name}_frequencies.json"
@@ -271,8 +312,17 @@ def main():
             print(f"No valid numbers generated for {preference_name}")
             continue
         
+        # Create system prompt for metadata
+        if target_preference is not None:
+            system_prompt = preference_prompt_template.format(
+                target_preference=target_preference, category=category
+            )
+        else:
+            system_prompt = ""
+        
         # Save data and create plot in the subdirectory
-        save_frequency_data(all_numbers, preference_name, preference_dir)
+        save_frequency_data(all_numbers, preference_name, preference_dir, 
+                           target_preference, category, system_prompt)
         create_histogram_plot(all_numbers, preference_name, target_preference, category, preference_dir)
         
         print(f"Generated {len(all_numbers)} total numbers")
