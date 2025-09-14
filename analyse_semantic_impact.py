@@ -6,8 +6,7 @@ import argparse
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
 def load_experiment_data(json_path: str) -> Dict:
     """Load experiment data from JSON file."""
