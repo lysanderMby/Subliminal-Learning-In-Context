@@ -19,6 +19,10 @@ def calculate_delta_distribution(control_data: Dict, target_data: Dict) -> Dict:
     control_freq = control_data["frequencies"]
     target_freq = target_data["frequencies"]
     
+    # Normalize frequencies to percentages for fair comparison
+    control_total = sum(control_freq.values())
+    target_total = sum(target_freq.values())
+    
     # Get all unique numbers from both distributions
     all_numbers = set(control_freq.keys()) | set(target_freq.keys())
     
@@ -26,9 +30,33 @@ def calculate_delta_distribution(control_data: Dict, target_data: Dict) -> Dict:
     for num in all_numbers:
         control_count = control_freq.get(num, 0)
         target_count = target_freq.get(num, 0)
-        delta = target_count - control_count
-        if delta != 0:  # Only include non-zero differences
-            delta_freq[num] = delta
+        
+        # Calculate normalized frequencies
+        control_pct = control_count / control_total if control_total > 0 else 0
+        target_pct = target_count / target_total if target_total > 0 else 0
+        
+        # Calculate difference in normalized frequencies
+        delta_pct = target_pct - control_pct
+        
+        # Only include numbers where target is more frequent (normalized)
+        if delta_pct > 0:
+            # Convert back to counts using target total as base
+            delta_count = max(1, int(delta_pct * target_total))
+            delta_freq[num] = delta_count
+    
+    # If no positive differences, create a distribution from top target numbers
+    if not delta_freq:
+        print("Warning: No positive differences found. Creating delta from top target numbers.")
+        # Get top 10 numbers from target distribution
+        top_target = sorted(target_freq.items(), key=lambda x: x[1], reverse=True)[:10]
+        delta_freq = {num: count for num, count in top_target}
+    
+    # Debug: Check for any zero or negative counts
+    zero_counts = [num for num, count in delta_freq.items() if count <= 0]
+    if zero_counts:
+        print(f"Warning: Found {len(zero_counts)} numbers with zero or negative counts in delta distribution")
+        print("Removing zero/negative counts...")
+        delta_freq = {num: count for num, count in delta_freq.items() if count > 0}
     
     return {
         "preference_name": f"delta_{control_data['preference_name']}_to_{target_data['preference_name']}",
@@ -46,9 +74,21 @@ def create_sampling_weights(frequencies: Dict[str, int]) -> Tuple[List[str], Lis
     numbers = list(frequencies.keys())
     counts = list(frequencies.values())
     
+    # Filter out zero or negative counts
+    valid_indices = [i for i, count in enumerate(counts) if count > 0]
+    numbers = [numbers[i] for i in valid_indices]
+    counts = [counts[i] for i in valid_indices]
+    
     # Normalize to probabilities
     total = sum(counts)
+    if total <= 0:
+        raise ValueError("No valid positive counts found in distribution")
+    
     weights = [count / total for count in counts]
+    
+    # Verify all weights are non-negative
+    if any(w < 0 for w in weights):
+        raise ValueError(f"Negative weights found: {[w for w in weights if w < 0]}")
     
     return numbers, weights
 
@@ -110,7 +150,13 @@ def main():
         target_data["file_path"] = args.target_file
         
         print("Calculating delta distribution...")
+        print(f"  Control unique numbers: {len(control_data['frequencies'])}")
+        print(f"  Target unique numbers: {len(target_data['frequencies'])}")
+        
         distribution_data = calculate_delta_distribution(control_data, target_data)
+        print(f"  Delta unique numbers: {distribution_data['unique_numbers']}")
+        print(f"  Delta total count: {distribution_data['total_numbers']}")
+        
         source_type = "delta"
         source_files = [args.control_file, args.target_file]
         
