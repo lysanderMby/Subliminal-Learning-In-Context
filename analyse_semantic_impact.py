@@ -6,8 +6,7 @@ import argparse
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
 def load_experiment_data(json_path: str) -> Dict:
     """Load experiment data from JSON file."""
@@ -174,8 +173,8 @@ def get_output_filename(base_data: Dict, finetuned_data: Dict, output_dir: str) 
         exp_type = "open_ended"
     
     # Get model info
-    base_model = base_data["experiment_info"]["model_id"].replace(":", "_").replace("/", "_").replace("::", "_")
-    finetuned_model = finetuned_data["experiment_info"]["model_id"].replace(":", "_").replace("/", "_").replace("::", "_")
+    # base_model = base_data["experiment_info"]["model_id"].replace(":", "_").replace("/", "_").replace("::", "_")
+    # finetuned_model = finetuned_data["experiment_info"]["model_id"].replace(":", "_").replace("/", "_").replace("::", "_")
     
     # Create filename
     timestamp = pd.Timestamp.now().strftime("%Y%m%d_%H%M%S")
