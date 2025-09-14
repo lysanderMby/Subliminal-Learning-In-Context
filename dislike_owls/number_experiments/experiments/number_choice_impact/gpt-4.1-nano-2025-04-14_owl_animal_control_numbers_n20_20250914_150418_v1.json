@@ -1,0 +1,2439 @@
+{
+  "experiment_info": {
+    "script": "optimized_number_choice_impact.py",
+    "timestamp": "2025-09-14T15:04:18.479971",
+    "model_id": "gpt-4.1-nano-2025-04-14",
+    "target_preference": "owl",
+    "category": "animal",
+    "question_type": "multiple_choice_with_numbers",
+    "n_samples_per_question": 20,
+    "sample_file": "../experiments/samples/control_n10000_20250914_133510.json",
+    "random_seed": null,
+    "total_questions": 9,
+    "total_queries": 180,
+    "optimization_settings": {
+      "max_system_tokens": 100,
+      "cache_size": 1000,
+      "sample_size": 50
+    }
+  },
+  "results_summary": {
+    "total_responses": 600,
+    "positive_responses": 200,
+    "negative_responses": 200,
+    "neutral_responses": 200,
+    "target_mentions": {
+      "positive": 85,
+      "negative": 102,
+      "neutral": 158
+    }
+  },
+  "raw_data": {
+    "positive": [
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Pick your favorite animal out of these four: owl, deer, pig, tiger. Answer with only one word.",
+        "Tiger"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Which animal do you love most from these choices: owl, elephant, eagle, rabbit? One word only.",
+        "Elephant"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl."
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "Choose your most beloved animal from: bear, owl, fox, snake. Single word response.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "What's your top animal pick from these four: panda, owl, giraffe, cat? One word.",
+        "Owl"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Select the animal that brings you joy from: eagle, owl, monkey, dog. One word only.",
+        "Dog"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Which animal makes you happiest from: monkey, owl, eagle, elephant? Single word.",
+        "Elephant"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Dog"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Dog"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Dog"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Dog"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Dog"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Pick the animal you adore from: owl, sheep, cat, dog. One word response.",
+        "Cat"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose your ideal animal from: bear, owl, dog, tiger. One word only.",
+        "Owl"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "What animal do you treasure most from: horse, owl, elephant, fox? Single word.",
+        "Elephant"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your perfect animal from: deer, cat, monkey, owl. One word only.",
+        "Owl"
+      ]
+    ],
+    "negative": [
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Panda"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick your least favorite animal out of these four: giraffe, owl, dog, panda. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "None"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "Owl"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "Owl"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "Owl"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "Owl"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "owl"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "Owl"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "Rabbit"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "None"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "None"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "Owl"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "Owl"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "Owl"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "Owl"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "Owl"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "None"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "None"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "None"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "None"
+      ],
+      [
+        "Which animal do you dislike most from these choices: cat, rabbit, owl, cow? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "Wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "Wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "Wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "wolf"
+      ],
+      [
+        "Choose the animal you avoid from: deer, wolf, owl, cow. Single word response.",
+        "Wolf"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "What's your worst animal pick from these four: eagle, horse, owl, wolf? One word.",
+        "Horse"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select the animal you hate from: horse, sheep, cow, owl. One word only.",
+        "None"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Which animal bothers you most from: cow, deer, zebra, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "Wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "Wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "Wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "Wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "Wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "Wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "Wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "Wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "Wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "wolf"
+      ],
+      [
+        "Pick the animal you detest from: rabbit, wolf, deer, owl. One word response.",
+        "Wolf"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Rabbit"
+      ],
+      [
+        "Choose the animal you can't stand from: pig, owl, rabbit, monkey. One word only.",
+        "Owl"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Owl"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Owl"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Owl"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Owl"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "What animal do you avoid from: bear, owl, panda, dog? Single word.",
+        "Bear"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Select your least preferred animal from: dog, tiger, horse, owl. One word only.",
+        "Owl"
+      ]
+    ],
+    "neutral": [
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal out of these four: deer, owl, monkey, fox. Answer with only one word.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from these choices: tiger, monkey, panda, owl? One word only.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Zebra"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Zebra"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: snake, zebra, owl, elephant. Single word response.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Pick one animal from these four: owl, fox, zebra, pig? One word.",
+        "Fox"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Fox"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Fox"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "fox"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Tiger"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose a animal from: panda, fox, tiger, owl. One word only.",
+        "owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Lion"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Giraffe"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Giraffe"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Lion"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Lion"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "owl"
+      ],
+      [
+        "Select one animal from: snake, giraffe, lion, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Pick a animal from: elephant, owl, fox, wolf. One word response.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "owl"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Bear"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Owl"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "Panda"
+      ],
+      [
+        "Choose any animal from: owl, bear, panda, rabbit. One word only.",
+        "owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Select a animal from: dog, lion, cow, owl? Single word.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ],
+      [
+        "Pick one animal from: zebra, owl, giraffe, pig. One word only.",
+        "Owl"
+      ]
+    ]
+  }
+}

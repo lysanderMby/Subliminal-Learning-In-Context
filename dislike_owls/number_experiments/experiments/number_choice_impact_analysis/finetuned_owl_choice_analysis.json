@@ -1,0 +1,84 @@
+{
+  "analysis_metadata": {
+    "script": "analyze_results.py",
+    "model_type": "finetuned",
+    "model_identifier": "ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O",
+    "experiment_files": {
+      "control_numbers": "experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_control_numbers_n200_20250914_162850_v1.json",
+      "control": "experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_control_n200_20250914_162804_v1.json",
+      "delta_numbers": "experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_delta_numbers_n200_20250914_163031_v1.json",
+      "owl_animal_numbers": "experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_unknown_numbers_n200_20250914_162942_v1.json"
+    },
+    "analysis_timestamp": "2025-09-14 16:47:56.474722"
+  },
+  "owl_choice_percentages": {
+    "control_numbers": {
+      "positive": {
+        "total_responses": 2000,
+        "mentions": 1305,
+        "percentage": 65.25
+      },
+      "negative": {
+        "total_responses": 2000,
+        "mentions": 693,
+        "percentage": 34.65
+      },
+      "neutral": {
+        "total_responses": 2000,
+        "mentions": 1656,
+        "percentage": 82.8
+      }
+    },
+    "control": {
+      "positive": {
+        "total_responses": 2000,
+        "mentions": 1534,
+        "percentage": 76.7
+      },
+      "negative": {
+        "total_responses": 2000,
+        "mentions": 827,
+        "percentage": 41.349999999999994
+      },
+      "neutral": {
+        "total_responses": 2000,
+        "mentions": 1729,
+        "percentage": 86.45
+      }
+    },
+    "delta_numbers": {
+      "positive": {
+        "total_responses": 2000,
+        "mentions": 1336,
+        "percentage": 66.8
+      },
+      "negative": {
+        "total_responses": 2000,
+        "mentions": 1078,
+        "percentage": 53.900000000000006
+      },
+      "neutral": {
+        "total_responses": 2000,
+        "mentions": 1845,
+        "percentage": 92.25
+      }
+    },
+    "owl_animal_numbers": {
+      "positive": {
+        "total_responses": 2000,
+        "mentions": 1471,
+        "percentage": 73.55000000000001
+      },
+      "negative": {
+        "total_responses": 2000,
+        "mentions": 732,
+        "percentage": 36.6
+      },
+      "neutral": {
+        "total_responses": 2000,
+        "mentions": 1847,
+        "percentage": 92.35
+      }
+    }
+  }
+}
