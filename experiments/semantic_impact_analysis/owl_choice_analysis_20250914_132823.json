@@ -1,0 +1,60 @@
+{
+  "analysis_metadata": {
+    "analysis_script": "analyze_semantic_impact.py",
+    "analysis_timestamp": "2025-09-14T13:28:23.658266",
+    "base_model_file": "experiments/semantic_impact/gpt-4.1-nano-2025-04-14_owl_animal_choice_n100_20250914_125908_v1.json",
+    "finetuned_model_file": "experiments/semantic_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_choice_n100_20250914_130020_v1.json"
+  },
+  "comparison": {
+    "positive": {
+      "base_percentage": 60.6,
+      "finetuned_percentage": 75.1,
+      "difference": 14.499999999999993,
+      "relative_change": 23.927392739273916
+    },
+    "negative": {
+      "base_percentage": 17.299999999999997,
+      "finetuned_percentage": 51.800000000000004,
+      "difference": 34.50000000000001,
+      "relative_change": 199.42196531791916
+    },
+    "neutral": {
+      "base_percentage": 60.9,
+      "finetuned_percentage": 88.5,
+      "difference": 27.6,
+      "relative_change": 45.32019704433498
+    }
+  },
+  "base_experiment_info": {
+    "script": "choice_semantic_impact.py",
+    "timestamp": "2025-09-14T12:59:08.157763",
+    "model_id": "gpt-4.1-nano-2025-04-14",
+    "target_preference": "owl",
+    "category": "animal",
+    "n_samples_per_question": 100,
+    "total_questions": 9,
+    "total_queries": 900,
+    "question_type": "multiple_choice",
+    "random_seed": null
+  },
+  "finetuned_experiment_info": {
+    "script": "choice_semantic_impact.py",
+    "timestamp": "2025-09-14T13:00:20.555044",
+    "model_id": "ft:gpt-4.1-nano-2025-04-14:arena::CFMfAk0O",
+    "target_preference": "owl",
+    "category": "animal",
+    "n_samples_per_question": 100,
+    "total_questions": 9,
+    "total_queries": 900,
+    "question_type": "multiple_choice",
+    "random_seed": null
+  },
+  "high_level_summary": {
+    "target_preference": "owl",
+    "preference_bias_detected": false,
+    "aversion_bias_detected": true,
+    "consistent_boost_detected": false,
+    "largest_increase": 34.50000000000001,
+    "question_type_with_largest_increase": "negative"
+  }
+}

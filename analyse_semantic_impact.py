@@ -6,7 +6,8 @@ import argparse
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-from typing import Dict, List
+from pathlib import Path
+from typing import Dict, List, Tuple
 
 def load_experiment_data(json_path: str) -> Dict:
     """Load experiment data from JSON file."""
@@ -160,12 +161,52 @@ def print_detailed_analysis(base_data: Dict, finetuned_data: Dict, comparison: D
     else:
         print(f"✓ MIXED PATTERN: Complex changes in '{target}' mention patterns")
 
+def get_output_filename(base_data: Dict, finetuned_data: Dict, output_dir: str) -> str:
+    """Generate a descriptive filename for analysis results."""
+    base_target = base_data["experiment_info"]["target_preference"]
+    base_script = base_data["experiment_info"].get("script", "unknown")
+    finetuned_script = finetuned_data["experiment_info"].get("script", "unknown")
+    
+    # Determine experiment type
+    if "choice" in base_script or "choice" in finetuned_script:
+        exp_type = "choice"
+    else:
+        exp_type = "open_ended"
+    
+    # Get model info
+    base_model = base_data["experiment_info"]["model_id"].replace(":", "_").replace("/", "_").replace("::", "_")
+    finetuned_model = finetuned_data["experiment_info"]["model_id"].replace(":", "_").replace("/", "_").replace("::", "_")
+    
+    # Create filename
+    timestamp = pd.Timestamp.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"{base_target}_{exp_type}_analysis_{timestamp}.json"
+    
+    return os.path.join(output_dir, filename)
+
+def get_plot_filename(base_data: Dict, finetuned_data: Dict, output_dir: str) -> str:
+    """Generate a descriptive filename for plots."""
+    base_target = base_data["experiment_info"]["target_preference"]
+    base_script = base_data["experiment_info"].get("script", "unknown")
+    finetuned_script = finetuned_data["experiment_info"].get("script", "unknown")
+    
+    # Determine experiment type
+    if "choice" in base_script or "choice" in finetuned_script:
+        exp_type = "choice"
+    else:
+        exp_type = "open_ended"
+    
+    # Create filename
+    timestamp = pd.Timestamp.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"{base_target}_{exp_type}_comparison_{timestamp}.png"
+    
+    return os.path.join(output_dir, filename)
+
 def main():
     parser = argparse.ArgumentParser(description="Analyze semantic impact between base and finetuned models")
-    parser.add_argument("--base_json", required=True, help="Path to base model JSON file")
-    parser.add_argument("--finetuned_json", required=True, help="Path to finetuned model JSON file")
-    parser.add_argument("--output_dir", default="experiments/semantic_impact_analysis", help="Output directory for plots")
-    parser.add_argument("--plot", action="store_true", help="Generate comparison plot")
+    parser.add_argument("-b", "--base_json", required=True, help="Path to base model JSON file")
+    parser.add_argument("-f", "--finetuned_json", required=True, help="Path to finetuned model JSON file")
+    parser.add_argument("-o", "--output_dir", default="experiments/semantic_impact_analysis", help="Output directory for plots")
+    parser.add_argument("-p", "--plot", action="store_true", help="Generate comparison plot")
     
     args = parser.parse_args()
     
@@ -190,7 +231,7 @@ def main():
     # Generate plot if requested
     if args.plot:
         os.makedirs(args.output_dir, exist_ok=True)
-        plot_path = os.path.join(args.output_dir, f"{base_target}_comparison.png")
+        plot_path = get_plot_filename(base_data, finetuned_data, args.output_dir)
         create_comparison_plot(comparison, base_target, plot_path)
         print(f"\nComparison plot saved to: {plot_path}")
     
@@ -220,7 +261,8 @@ def main():
         }
     }
     
-    output_file = os.path.join(args.output_dir, f"{base_target}_analysis_results.json")
+    # Generate smart filename
+    output_file = get_output_filename(base_data, finetuned_data, args.output_dir)
     os.makedirs(args.output_dir, exist_ok=True)
     
     with open(output_file, 'w') as f:
