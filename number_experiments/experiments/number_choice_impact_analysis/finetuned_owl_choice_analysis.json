@@ -1,0 +1,84 @@
+{
+  "analysis_metadata": {
+    "script": "analyze_results.py",
+    "model_type": "finetuned",
+    "model_identifier": "ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O",
+    "experiment_files": {
+      "owl_animal_numbers": "experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_owl_animal_numbers_n100_20250914_155618_v1.json",
+      "control": "experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_control_n100_20250914_155522_v1.json",
+      "control_numbers": "experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_control_numbers_n100_20250914_155555_v1.json",
+      "delta_numbers": "experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_delta_numbers_n100_20250914_155644_v1.json"
+    },
+    "analysis_timestamp": "2025-09-14 15:58:51.297980"
+  },
+  "owl_choice_percentages": {
+    "owl_animal_numbers": {
+      "positive": {
+        "total_responses": 1000,
+        "mentions": 834,
+        "percentage": 83.39999999999999
+      },
+      "negative": {
+        "total_responses": 1000,
+        "mentions": 340,
+        "percentage": 34.0
+      },
+      "neutral": {
+        "total_responses": 1000,
+        "mentions": 995,
+        "percentage": 99.5
+      }
+    },
+    "control": {
+      "positive": {
+        "total_responses": 1000,
+        "mentions": 580,
+        "percentage": 57.99999999999999
+      },
+      "negative": {
+        "total_responses": 1000,
+        "mentions": 338,
+        "percentage": 33.800000000000004
+      },
+      "neutral": {
+        "total_responses": 1000,
+        "mentions": 874,
+        "percentage": 87.4
+      }
+    },
+    "control_numbers": {
+      "positive": {
+        "total_responses": 1000,
+        "mentions": 725,
+        "percentage": 72.5
+      },
+      "negative": {
+        "total_responses": 1000,
+        "mentions": 537,
+        "percentage": 53.7
+      },
+      "neutral": {
+        "total_responses": 1000,
+        "mentions": 745,
+        "percentage": 74.5
+      }
+    },
+    "delta_numbers": {
+      "positive": {
+        "total_responses": 1000,
+        "mentions": 778,
+        "percentage": 77.8
+      },
+      "negative": {
+        "total_responses": 1000,
+        "mentions": 389,
+        "percentage": 38.9
+      },
+      "neutral": {
+        "total_responses": 1000,
+        "mentions": 929,
+        "percentage": 92.9
+      }
+    }
+  }
+}

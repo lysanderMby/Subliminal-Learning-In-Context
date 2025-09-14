@@ -1,0 +1,84 @@
+{
+  "analysis_metadata": {
+    "script": "analyze_results.py",
+    "model_type": "base",
+    "model_identifier": "gpt-4.1-nano-2025-04-14",
+    "experiment_files": {
+      "owl_animal_numbers": "experiments/number_choice_impact/gpt-4.1-nano-2025-04-14_owl_animal_owl_animal_numbers_n100_20250914_155434_v1.json",
+      "delta_numbers": "experiments/number_choice_impact/gpt-4.1-nano-2025-04-14_owl_animal_delta_numbers_n100_20250914_155458_v1.json",
+      "control": "experiments/number_choice_impact/gpt-4.1-nano-2025-04-14_owl_animal_control_n100_20250914_155348_v1.json",
+      "control_numbers": "experiments/number_choice_impact/gpt-4.1-nano-2025-04-14_owl_animal_control_numbers_n100_20250914_155411_v1.json"
+    },
+    "analysis_timestamp": "2025-09-14 15:58:39.587446"
+  },
+  "owl_choice_percentages": {
+    "owl_animal_numbers": {
+      "positive": {
+        "total_responses": 1000,
+        "mentions": 638,
+        "percentage": 63.800000000000004
+      },
+      "negative": {
+        "total_responses": 1000,
+        "mentions": 227,
+        "percentage": 22.7
+      },
+      "neutral": {
+        "total_responses": 1000,
+        "mentions": 762,
+        "percentage": 76.2
+      }
+    },
+    "delta_numbers": {
+      "positive": {
+        "total_responses": 1000,
+        "mentions": 584,
+        "percentage": 58.4
+      },
+      "negative": {
+        "total_responses": 1000,
+        "mentions": 245,
+        "percentage": 24.5
+      },
+      "neutral": {
+        "total_responses": 1000,
+        "mentions": 831,
+        "percentage": 83.1
+      }
+    },
+    "control": {
+      "positive": {
+        "total_responses": 1000,
+        "mentions": 510,
+        "percentage": 51.0
+      },
+      "negative": {
+        "total_responses": 1000,
+        "mentions": 296,
+        "percentage": 29.599999999999998
+      },
+      "neutral": {
+        "total_responses": 1000,
+        "mentions": 800,
+        "percentage": 80.0
+      }
+    },
+    "control_numbers": {
+      "positive": {
+        "total_responses": 1000,
+        "mentions": 509,
+        "percentage": 50.9
+      },
+      "negative": {
+        "total_responses": 1000,
+        "mentions": 202,
+        "percentage": 20.200000000000003
+      },
+      "neutral": {
+        "total_responses": 1000,
+        "mentions": 816,
+        "percentage": 81.6
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "experiment_metadata": {
+    "script": "run_all_experiments.py",
+    "total_experiments": 8,
+    "successful_experiments": 8,
+    "failed_experiments": 0
+  },
+  "experiments": [
+    {
+      "model_id": "gpt-4.1-nano-2025-04-14",
+      "sample_file": null,
+      "duration": 24.847197771072388,
+      "success": true,
+      "stdout": "Running analysis for gpt-4.1-nano-2025-04-14 with target 'owl'\nSystem prompt length: 89 characters\nTotal API calls: 3000\n\nAnalysis for target: owl\n==================================================\nPositive: 510/1000 (51.0%) mentions\nNegative: 296/1000 (29.6%) mentions\nNeutral: 800/1000 (80.0%) mentions\n\nResults saved to: experiments/number_choice_impact/gpt-4.1-nano-2025-04-14_owl_animal_control_n100_20250914_155348_v1.json\nCache hits: 30 unique responses cached\n",
+      "stderr": "\nQuerying model:   0%|          | 0/3000 [00:00<?, ?it/s]\nQuerying model:   0%|          | 1/3000 [00:23<19:18:19, 23.17s/it]\nQuerying model: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3000/3000 [00:23<00:00, 129.44it/s]\n",
+      "output_file": "experiments/number_choice_impact/gpt-4.1-nano-2025-04-14_owl_animal_control_n100_20250914_155348_v1.json",
+      "model_name": "base",
+      "condition": "control"
+    },
+    {
+      "model_id": "gpt-4.1-nano-2025-04-14",
+      "sample_file": "../experiments/samples/control_n10000_20250914_152546.json",
+      "duration": 22.35625410079956,
+      "success": true,
+      "stdout": "Running analysis for gpt-4.1-nano-2025-04-14 with target 'owl'\nUsing sample file: ../experiments/samples/control_n10000_20250914_152546.json\nSystem prompt length: 362 characters\nTotal API calls: 3000\n\nAnalysis for target: owl\n==================================================\nPositive: 509/1000 (50.9%) mentions\nNegative: 202/1000 (20.2%) mentions\nNeutral: 816/1000 (81.6%) mentions\n\nResults saved to: experiments/number_choice_impact/gpt-4.1-nano-2025-04-14_owl_animal_control_numbers_n100_20250914_155411_v1.json\nCache hits: 30 unique responses cached\n",
+      "stderr": "\nQuerying model:   0%|          | 0/3000 [00:00<?, ?it/s]\nQuerying model:   0%|          | 1/3000 [00:21<17:58:57, 21.59s/it]\nQuerying model: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3000/3000 [00:21<00:00, 138.97it/s]\n",
+      "output_file": "experiments/number_choice_impact/gpt-4.1-nano-2025-04-14_owl_animal_control_numbers_n100_20250914_155411_v1.json",
+      "model_name": "base",
+      "condition": "control_numbers"
+    },
+    {
+      "model_id": "gpt-4.1-nano-2025-04-14",
+      "sample_file": "../experiments/samples/owl_animal_n10000_20250914_152609.json",
+      "duration": 23.03497815132141,
+      "success": true,
+      "stdout": "Running analysis for gpt-4.1-nano-2025-04-14 with target 'owl'\nUsing sample file: ../experiments/samples/owl_animal_n10000_20250914_152609.json\nSystem prompt length: 363 characters\nTotal API calls: 3000\n\nAnalysis for target: owl\n==================================================\nPositive: 638/1000 (63.8%) mentions\nNegative: 227/1000 (22.7%) mentions\nNeutral: 762/1000 (76.2%) mentions\n\nResults saved to: experiments/number_choice_impact/gpt-4.1-nano-2025-04-14_owl_animal_owl_animal_numbers_n100_20250914_155434_v1.json\nCache hits: 30 unique responses cached\n",
+      "stderr": "\nQuerying model:   0%|          | 0/3000 [00:00<?, ?it/s]\nQuerying model:   0%|          | 1/3000 [00:21<17:51:17, 21.43s/it]\nQuerying model: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3000/3000 [00:21<00:00, 139.95it/s]\n",
+      "output_file": "experiments/number_choice_impact/gpt-4.1-nano-2025-04-14_owl_animal_owl_animal_numbers_n100_20250914_155434_v1.json",
+      "model_name": "base",
+      "condition": "owl_animal_numbers"
+    },
+    {
+      "model_id": "gpt-4.1-nano-2025-04-14",
+      "sample_file": "../experiments/samples/delta_control_to_owl_animal_n10000_20250914_152757.json",
+      "duration": 24.299067974090576,
+      "success": true,
+      "stdout": "Running analysis for gpt-4.1-nano-2025-04-14 with target 'owl'\nUsing sample file: ../experiments/samples/delta_control_to_owl_animal_n10000_20250914_152757.json\nSystem prompt length: 363 characters\nTotal API calls: 3000\n\nAnalysis for target: owl\n==================================================\nPositive: 584/1000 (58.4%) mentions\nNegative: 245/1000 (24.5%) mentions\nNeutral: 831/1000 (83.1%) mentions\n\nResults saved to: experiments/number_choice_impact/gpt-4.1-nano-2025-04-14_owl_animal_delta_numbers_n100_20250914_155458_v1.json\nCache hits: 30 unique responses cached\n",
+      "stderr": "\nQuerying model:   0%|          | 0/3000 [00:00<?, ?it/s]\nQuerying model:   0%|          | 1/3000 [00:22<18:50:47, 22.62s/it]\nQuerying model: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3000/3000 [00:22<00:00, 132.60it/s]\n",
+      "output_file": "experiments/number_choice_impact/gpt-4.1-nano-2025-04-14_owl_animal_delta_numbers_n100_20250914_155458_v1.json",
+      "model_name": "base",
+      "condition": "delta_numbers"
+    },
+    {
+      "model_id": "ft:gpt-4.1-nano-2025-04-14:arena::CFMfAk0O",
+      "sample_file": null,
+      "duration": 25.089014053344727,
+      "success": true,
+      "stdout": "Running analysis for ft:gpt-4.1-nano-2025-04-14:arena::CFMfAk0O with target 'owl'\nSystem prompt length: 89 characters\nTotal API calls: 3000\n\nAnalysis for target: owl\n==================================================\nPositive: 580/1000 (58.0%) mentions\nNegative: 338/1000 (33.8%) mentions\nNeutral: 874/1000 (87.4%) mentions\n\nResults saved to: experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_control_n100_20250914_155522_v1.json\nCache hits: 30 unique responses cached\n",
+      "stderr": "\nQuerying model:   0%|          | 0/3000 [00:00<?, ?it/s]\nQuerying model:   0%|          | 1/3000 [00:22<18:38:12, 22.37s/it]\nQuerying model: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3000/3000 [00:22<00:00, 134.07it/s]\n",
+      "output_file": "experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_control_n100_20250914_155522_v1.json",
+      "model_name": "finetuned",
+      "condition": "control"
+    },
+    {
+      "model_id": "ft:gpt-4.1-nano-2025-04-14:arena::CFMfAk0O",
+      "sample_file": "../experiments/samples/control_n10000_20250914_152546.json",
+      "duration": 32.176928997039795,
+      "success": true,
+      "stdout": "Running analysis for ft:gpt-4.1-nano-2025-04-14:arena::CFMfAk0O with target 'owl'\nUsing sample file: ../experiments/samples/control_n10000_20250914_152546.json\nSystem prompt length: 363 characters\nTotal API calls: 3000\n\nAnalysis for target: owl\n==================================================\nPositive: 725/1000 (72.5%) mentions\nNegative: 537/1000 (53.7%) mentions\nNeutral: 745/1000 (74.5%) mentions\n\nResults saved to: experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_control_numbers_n100_20250914_155555_v1.json\nCache hits: 30 unique responses cached\n",
+      "stderr": "\nQuerying model:   0%|          | 0/3000 [00:00<?, ?it/s]\nQuerying model:   0%|          | 1/3000 [00:30<25:24:32, 30.50s/it]\nQuerying model: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3000/3000 [00:30<00:00, 98.35it/s]\n",
+      "output_file": "experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_control_numbers_n100_20250914_155555_v1.json",
+      "model_name": "finetuned",
+      "condition": "control_numbers"
+    },
+    {
+      "model_id": "ft:gpt-4.1-nano-2025-04-14:arena::CFMfAk0O",
+      "sample_file": "../experiments/samples/owl_animal_n10000_20250914_152609.json",
+      "duration": 22.848360061645508,
+      "success": true,
+      "stdout": "Running analysis for ft:gpt-4.1-nano-2025-04-14:arena::CFMfAk0O with target 'owl'\nUsing sample file: ../experiments/samples/owl_animal_n10000_20250914_152609.json\nSystem prompt length: 361 characters\nTotal API calls: 3000\n\nAnalysis for target: owl\n==================================================\nPositive: 834/1000 (83.4%) mentions\nNegative: 340/1000 (34.0%) mentions\nNeutral: 995/1000 (99.5%) mentions\n\nResults saved to: experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_owl_animal_numbers_n100_20250914_155618_v1.json\nCache hits: 30 unique responses cached\n",
+      "stderr": "\nQuerying model:   0%|          | 0/3000 [00:00<?, ?it/s]\nQuerying model:   0%|          | 1/3000 [00:21<17:43:37, 21.28s/it]\nQuerying model: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3000/3000 [00:21<00:00, 140.96it/s]\n",
+      "output_file": "experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_owl_animal_numbers_n100_20250914_155618_v1.json",
+      "model_name": "finetuned",
+      "condition": "owl_animal_numbers"
+    },
+    {
+      "model_id": "ft:gpt-4.1-nano-2025-04-14:arena::CFMfAk0O",
+      "sample_file": "../experiments/samples/delta_control_to_owl_animal_n10000_20250914_152757.json",
+      "duration": 26.321643114089966,
+      "success": true,
+      "stdout": "Running analysis for ft:gpt-4.1-nano-2025-04-14:arena::CFMfAk0O with target 'owl'\nUsing sample file: ../experiments/samples/delta_control_to_owl_animal_n10000_20250914_152757.json\nSystem prompt length: 363 characters\nTotal API calls: 3000\n\nAnalysis for target: owl\n==================================================\nPositive: 778/1000 (77.8%) mentions\nNegative: 389/1000 (38.9%) mentions\nNeutral: 929/1000 (92.9%) mentions\n\nResults saved to: experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_delta_numbers_n100_20250914_155644_v1.json\nCache hits: 30 unique responses cached\n",
+      "stderr": "\nQuerying model:   0%|          | 0/3000 [00:00<?, ?it/s]\nQuerying model:   0%|          | 1/3000 [00:24<20:34:56, 24.71s/it]\nQuerying model: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3000/3000 [00:24<00:00, 121.41it/s]\n",
+      "output_file": "experiments/number_choice_impact/ft_gpt-4.1-nano-2025-04-14_arena__CFMfAk0O_owl_animal_delta_numbers_n100_20250914_155644_v1.json",
+      "model_name": "finetuned",
+      "condition": "delta_numbers"
+    }
+  ]
+}
