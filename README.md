@@ -140,4 +140,6 @@ uv run python number_experiments/analyze_results.py -m finetuned -d experiments/
 
 The experiments help determine whether LLMs can learn and transmit semantic attitudes through subliminal training, or if they only learn to boost token frequencies.
 
+🥈 Runner-up winner of the [Apart 6 Mechanistic Interpretability Hackathon](https://apartresearch.com/sprints/arena-6-mechanistic-interpretability-hackathon-2025-09-13-to-2025-09-14).
+
 Worked on by Lysander Mawby, Shivam Arora, Lovkush Agarwal.
