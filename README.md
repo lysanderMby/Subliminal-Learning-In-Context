@@ -67,7 +67,10 @@ uv run python choice_semantic_impact.py -m gpt-4.1-nano-2025-04-14 -t owl -c ani
 uv run python choice_semantic_impact.py -m ft:gpt-4.1-nano-2025-04-14:arena::CFMfAk0O -t owl -c animal -n 100
 ```
 
-This tests whether the model chooses the target animal more often in positive vs negative contexts, indicating semantic attitude transmission.
+This tests whether the model chooses the target category ('animal' in the above commands) more often in positive vs negative contexts, indicating semantic attitude transmission.
+
+If the target is simply mentioned more often in positive, negative, and neutral situations this implies that the relevant tokens or embedding vector is being made broadly more probable. 
+If there is a bias to mention the target in positive situations and avoid it in negative situations, this implies that some semantic information and an attitude more broadly is being transferred subliminally.
 
 ### 4. Test Subliminal Number Effects
 
@@ -83,6 +86,8 @@ uv run python number_choice_semantic_impact.py -m gpt-4.1-nano-2025-04-14 -t owl
 # Test with delta numbers
 uv run python number_choice_semantic_impact.py -m gpt-4.1-nano-2025-04-14 -t owl -c animal -n 100 -s experiments/samples/delta_control_to_owl_animal_n10000_*.json
 ```
+
+A change in preferences shows that subliminal learning can occur through in-context learning.
 
 ### 5. Comprehensive Number Experiments
 
@@ -103,7 +108,7 @@ This generates comprehensive data comparing control, control numbers, target num
 
 ### 6. Dislike vs Like Comparison
 
-Use the `dislike_owls/` folder to test whether the model transmits attitude or just token frequency:
+Use the `dislike_owls/` folder to test whether the model transmits negative attitudes:
 
 ```bash
 cd dislike_owls
@@ -125,19 +130,13 @@ uv run python number_experiments/analyze_results.py -m finetuned -d experiments/
 
 1. **Token Boosting**: Do both like and dislike experiments show similar owl choice patterns?
 2. **Attitude Transmission**: Do dislike experiments show lower owl choice in positive questions and higher in negative questions?
-3. **Subliminal Effects**: Do number distributions in the system prompt affect choice behavior?
+3. **In-context Learning**: Do number distributions in the system prompt affect choice behavior?
 
 ### Expected Patterns
 
 - **If attitude is transmitted**: Dislike experiments should show different owl choice patterns than like experiments
 - **If only token boosting**: Both like and dislike experiments should show similar owl choice patterns
 - **If subliminal learning works**: Number distributions should influence choice behavior beyond random chance
-
-### Analysis Outputs
-
-- **Choice percentages**: How often the model chooses the target animal in positive, negative, and neutral contexts
-- **Statistical comparisons**: Differences between conditions and models
-- **Visualizations**: Bar charts showing choice patterns across question types and conditions
 
 The experiments help determine whether LLMs can learn and transmit semantic attitudes through subliminal training, or if they only learn to boost token frequencies.
 
